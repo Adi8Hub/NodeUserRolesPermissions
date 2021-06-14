@@ -1,0 +1,33 @@
+GET http://localhost:3000/dashboard
+Content-Type: application/json
+
+{
+    "userId" : 4
+}
+
+###
+GET http://localhost:3000/
+
+###//Non admin users
+GET http://localhost:3000/admin
+Content-Type: application/json
+
+{
+    "userId" : 2
+}
+###// admin users
+GET http://localhost:3000/admin
+Content-Type: application/json
+
+{
+    "userId" : 1
+}
+
+###// projects
+DELETE  http://localhost:3000/projects/1
+Content-Type: application/json
+
+{
+    "userId" : 1
+}
+
